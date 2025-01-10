@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Jan-2025 às 11:43
+-- Tempo de geração: 10-Jan-2025 às 13:05
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.2.12
 
@@ -147,6 +147,15 @@ CREATE TABLE `products` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `products`
+--
+
+INSERT INTO `products` (`id`, `codigo_produto`, `nome_produto`, `categoria`, `preco_unitario`, `descricao`, `created_at`, `updated_at`) VALUES
+(1, '1', 'Teclado  aaa', 'teclado', 132.00, 'um teclado', NULL, NULL),
+(2, '2', 'mesa', 'mesa', 89.00, 'una mesita blanca', NULL, NULL),
+(3, '3\r\n', 'Rato black', 'Rato', 32.00, 'um rato negro', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -167,7 +176,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('4LvA3AzCXNbT30mKWIRF3xTkTltl8LOTa6ys3TmG', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaWM5ZFpkZEVpamRuaTVITThzZnNTak81eFl4TmI3VjJCTWptWGkxdCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1736505499);
+('4LvA3AzCXNbT30mKWIRF3xTkTltl8LOTa6ys3TmG', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaWM5ZFpkZEVpamRuaTVITThzZnNTak81eFl4TmI3VjJCTWptWGkxdCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1736505499),
+('lKnWuBvZgKzert4J5NW6lUNfMRMjE07Hg0z74J52', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibFk2Z3NSMWdvUk4wdGxQYmRyeExtUklObUVpVnZTNktUTHVpdU92NSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9saXN0YSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1736510605);
 
 -- --------------------------------------------------------
 
@@ -281,7 +291,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de tabela `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `users`
